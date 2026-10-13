@@ -16,7 +16,8 @@
   #app{height:100dvh;display:flex;flex-direction:column}
   header{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:8px 12px;
     background:var(--panel2);border-bottom:1px solid rgba(255,255,255,.08)}
-  .logo{font-weight:800;font-size:18px;color:var(--gold);letter-spacing:1px}
+  .logo{font-weight:800;font-size:18px;color:var(--gold);letter-spacing:1px;display:flex;align-items:center;gap:8px}
+  .logo img,.title-mark{width:28px;height:28px;border-radius:7px;display:block;flex:none}
   #turn-banner{font-size:14px;font-weight:700;padding:6px 12px;border-radius:16px;background:rgba(255,255,255,.08)}
   #dice{font-size:20px;font-weight:800;min-width:64px;text-align:center}
   .spacer{flex:1}
@@ -99,12 +100,13 @@ body.bar-mode #actionbar button{min-height:44px;min-width:64px;font-size:15px;fl
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Hex Isle 3D">
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="./icon-180.png">
 </head>
 <body>
 <div id="app">
   <header>
-    <div class="logo">⬢ HEX ISLE</div>
+    <div class="logo"><img src="./icon.svg" alt=""> HEX ISLE</div>
     <div id="turn-banner">…</div>
     <div id="dice">🎲</div>
     <div class="spacer"></div>
@@ -130,7 +132,7 @@ body.bar-mode #actionbar button{min-height:44px;min-width:64px;font-size:15px;fl
 </div>
 
 <div class="modal-back open" id="setup-modal"><div class="modal">
-  <h2>⬢ Hex Isle</h2>
+  <h2 style="display:flex;align-items:center;gap:10px"><img class="title-mark" src="./icon.svg" alt="" style="width:40px;height:40px;border-radius:10px"> Hex Isle</h2>
   <p>Settle the island, gather timber, clay, grain, wool and stone, and be the first to <b>10 victory points</b>. A tribute to the classic — with original art and a faster AI.<br><span style="opacity:.75;font-size:13px">Drag to move the map • two fingers to rotate & zoom • tap to play.</span></p>
   <h3>Game mode</h3>
   <div class="row">
